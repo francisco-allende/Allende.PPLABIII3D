@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administracion</title>
+    <link rel="stylesheet" href="./css/styles_administracion.css" /> 
+</head>
+<head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="./index.html" class="href_non_decoration" target="_blank">
+            <img src="./imagenes/logo_maserati.png" alt="logo" id="img_logo">
+        </a>
+        <ul id="menu">
+            <li class="nav_li"><a href="./index.html" class="href_non_decoration" target="_blank">Nosotros</a></li>
+            <li class="nav_li"><a href="./administracion.html" class="href_non_decoration">Anuncios</a></li>
+            <li class="nav_li"><a href="#" class="href_non_decoration">Blog</a></li>
+            <li class="nav_li"><a href="#" class="href_non_decoration">Contacto</a></li>
+        </ul>
+    </nav>
+  
+    <!--Encabezado-->
+    <header>
+        <h1 class="title">Administración</h1>
+    
+        <div class="img_container">
+            <img src="./imagenes/portada.jpg" alt="portada maserati paris" id="portada"/>
+        </div>
+    </header>
+  
+    
+    <!--Formulario que añade a la tabla dinamica -->
+    <form id="ABM_Form">
+        <p id="formTitle">Cargar anuncio</p><br>
+        <label for="txtTitulo">Titulo:</label><br>
+        <input type="text" name="titulo" id="txtTitulo" placeholder="Titulo" size="50"/>
+        <br>
+        <small></small>
+        <br/><br/>
+
+        <label for="txtTransaccion">Transaccion:</label>
+        <br><br>
+        <input type="radio" name="transaccion" id="txtVenta" value="venta" />
+        <label for="txtVenta">Venta</label><br><br>
+        <input type="radio" name="transaccion" id="txtAlquiler" value="alquiler"/>
+        <label for="txtAlquiler">Alquiler</label>
+        <br>
+        <small></small>
+        <br><br>
+
+        <label for="txtDescripcion">Descripcion:</label><br>
+        <input type="text" name="descripcion" id="txtDescripcion" placeholder="Descripcion" size="50" />
+        <br>
+        <small></small>
+        <br><br>
+
+        <label for="txtPrecio">Precio:</label><br>
+        <input type="number" name="precio" id="txtPrecio" placeholder="Precio" />
+        <br>
+        <small></small>
+        <br><br>
+        <div class="inputsAuto">
+            <img src="./imagenes/icono_puerta.png" alt="icono puerta" class="icono">
+            <input type="number" name="puertas" id="txtPuertas" placeholder="Puertas" />
+            <br>
+            <small></small>
+    
+            <img src="./imagenes/icono_kms.png" alt="icono kms" class="icono">
+            <input type="number" name="kms" id="txtKms" placeholder="KMs"/>
+            <br>
+            <small></small>
+    
+            <img src="./imagenes/icono_potencia.png" alt="icono potencia" class="icono"><br>
+            <input type="number" name="potencia" id="txtPotencia" placeholder="Potencia"/>
+            <br>
+            <small></small>
+        </div>
+    
+
+        <div id="formDivBtn">
+            <button class="formButton" id="btnCargar"><img src="./imagenes/icono_guardar.png" alt="icono potencia" class="icono">  Guardar</button>
+            <button class="formButton" id="btnCancelar">Cancelar</button>
+            <!--Los botones de eliminar y modificar se crean en el DOM-->
+        </div>
+    </form>  
+
+    <!--Spinner de carga-->
+    <div id="containerSpinner">   
+    </div>
+
+    <!--Tabla dinamica de anuncios-->
+    <div id="divTabla">
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <ul id="menu_footer">
+            <li class="footer_li"><a href="#" class="href_non_decoration">Nosotros</a></li>
+            <li class="footer_li"><a href="./administracion.html" class="href_non_decoration" target="_blank">Anuncios</a></li>
+            <li class="footer_li"><a href="#" class="href_non_decoration">Blog</a></li>
+            <li class="footer_li"><a href="#" class="href_non_decoration">Contacto</a></li>
+        </ul>
+        <p id="copy_footer">Todos los derechos reservados 2022 &copy;</p>
+    </footer>
+
+<script src="./js/app.js" type="module"></script>
+</body>
+</html>
