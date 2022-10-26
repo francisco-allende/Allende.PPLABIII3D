@@ -8,15 +8,14 @@ const agregar = (inputs, transaccion)=>{
             transaccion,
             inputs[3].value, //descripcion
             inputs[4].value, //precio
-            inputs[5].value, //baños
-            inputs[6].value, //autos
-            inputs[7].value, //dormis
+            inputs[5].value, //puertas
+            inputs[6].value, //kms
+            inputs[7].value, //potencia
             )
     return myNewObj;
 }
 
-const borrar = (anuncios, selectedAnuncio, index, inputs, formBtns) =>{
-    //arrayBackup.push(selectedAnuncio);
+const borrar = (anuncios, index, inputs, formBtns) =>{
     anuncios.splice(index, 1);
     refreshTable(anuncios);
     vaciar(inputs);

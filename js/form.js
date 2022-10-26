@@ -1,5 +1,3 @@
-import { validar, validarRadioButton } from "./validaciones.js";
-
 function avoidFormSubmit(formBtns)
 {
     for (let i = 0; i < formBtns.length; i++) 
@@ -8,20 +6,6 @@ function avoidFormSubmit(formBtns)
             e.preventDefault();
         })   
     }
-}
-
-function asignarManejadorDeEventos(inputs)
-{
-    inputs.forEach(element => {
-        if(element.name != "transaccion")
-        {
-            element.addEventListener("blur", validar)
-        }
-        else
-        {
-            element.addEventListener("click", validarRadioButton);
-        }     
-    });
 }
 
 function asignarNonValid(inputs)
@@ -123,7 +107,6 @@ function modificarObjetoAnuncio(inputs, selectedAnuncio)
 
 export {
     avoidFormSubmit,
-    asignarManejadorDeEventos,
     asignarNonValid,
     vaciar,
     loadModifyEliminarBtns,

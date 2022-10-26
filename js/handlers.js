@@ -1,5 +1,5 @@
 import {getTransaccionType} from "./anuncio.js";
-import {validarSubmit} from "./validaciones.js";
+import {validarSubmit, validar, validarRadioButton} from "./validaciones.js";
 import {vaciar, borrarBotones, loadModifyEliminarBtns, avoidFormSubmit, loadClickedAnuncio} from "./form.js";
 import {refreshTable} from "./tabla.js";
 import {agregar, borrar, modificar} from "./crud.js";
@@ -51,7 +51,7 @@ const handlerSeleccionar = (id, inputs, formBtns)=>{
         let $btnModificar = loadModifyEliminarBtns("Modificar", "btnModificar");
         $btnEliminar.addEventListener("click", ()=>
         {
-            borrar(anuncios, selectedAnuncio, index, inputs, formBtns);
+            borrar(anuncios, index, inputs, formBtns);
         });
         $btnModificar.addEventListener("click", ()=>
         {
@@ -63,8 +63,23 @@ const handlerSeleccionar = (id, inputs, formBtns)=>{
     loadClickedAnuncio(inputs, selectedAnuncio);
 }
 
+const asignarManejadorDeEventos = (inputs) =>
+{
+    inputs.forEach(element => {
+        if(element.name != "transaccion")
+        {
+            element.addEventListener("blur", validar)
+        }
+        else
+        {
+            element.addEventListener("click", validarRadioButton);
+        }     
+    });
+}
+
 export{
     handlerCargar,
     chequearPrimeraVez,
-    handlerSeleccionar
+    handlerSeleccionar,
+    asignarManejadorDeEventos
 }

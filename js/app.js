@@ -1,5 +1,5 @@
-import {handlerCargar, handlerSeleccionar, chequearPrimeraVez } from "./handlers.js";
-import {avoidFormSubmit, asignarManejadorDeEventos, asignarNonValid, vaciar, borrarBotones} from "./form.js";
+import {handlerCargar, handlerSeleccionar, chequearPrimeraVez, asignarManejadorDeEventos } from "./handlers.js";
+import {avoidFormSubmit, asignarNonValid, vaciar, borrarBotones} from "./form.js";
 import { buildTable} from "./tabla.js";
 
 //Storage, cargo mi BBDD
